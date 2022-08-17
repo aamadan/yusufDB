@@ -26,7 +26,7 @@
 --
 
 CREATE TABLE cart (
- id bigserial NOT NULL,
+ id int NOT NULL,
  magaca  varchar(200) NOT NULL,
  price decimal(18,2) NOT NULL,
  image varchar(200) NOT NULL,
@@ -62,7 +62,7 @@ INSERT INTO cart (id, magaca, price, image, email, quantity) VALUES
 --
 
 CREATE TABLE cusordered (
-  id bigserial NOT NULL,
+  id int NOT NULL,
   magac varchar(200) NOT NULL,
   telephone varchar(200) NOT NULL,
   ciwaan varchar(200) NOT NULL
@@ -82,7 +82,7 @@ INSERT INTO cusordered (id, magac, telephone, ciwaan) VALUES
 --
 
 CREATE TABLE customers (
-  id bigserial NOT NULL,
+  id int NOT NULL,
   magac varchar(200) NOT NULL,
   ciwaan varchar(200) NOT NULL,
   telephone varchar(200) NOT NULL,
@@ -111,7 +111,7 @@ INSERT INTO customers (id, magac, ciwaan, telephone, email, password) VALUES
 --
 
 CREATE TABLE fulfilledcus (
-  id bigserial NOT NULL,
+  id int NOT NULL,
   magac varchar(200) NOT NULL,
   telepphone varchar(200) NOT NULL
 ); 
@@ -131,7 +131,7 @@ INSERT INTO fulfilledcus (id, magac, telepphone) VALUES
 --
 
 CREATE TABLE fulfilledorderes (
-  id bigserial NOT NULL,
+  id int NOT NULL,
   magac varchar(200) NOT NULL,
   quantity INTEGER NOT NULL,
   price decimal(18,2) NOT NULL,
@@ -147,7 +147,7 @@ CREATE TABLE fulfilledorderes (
 --
 
 CREATE TABLE orders (
-  id bigserial NOT NULL,
+  id int NOT NULL,
   magac varchar(200) NOT NULL,
   quantity INTEGER NOT NULL,
   price decimal(18,2) NOT NULL,
@@ -177,7 +177,7 @@ INSERT INTO orders (id, magac, quantity, price, email, cusName, image) VALUES
 --
 
 CREATE TABLE products (
-  id bigserial NOT NULL,
+  id int NOT NULL,
   magac varchar(200) NOT NULL,
   price decimal(18,2) NOT NULL,
   quantity INTEGER NOT NULL,
@@ -248,46 +248,46 @@ ALTER TABLE products
 -- AUTO_INCREMENT for table cart
 --
 ALTER TABLE cart
-  MODIFY id bigserial NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY id int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
   
   -- example
-  ALTER TABLE cart ALTER COLUMN  id bigserial NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  ALTER TABLE cart ALTER COLUMN  id int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table cusordered
 --
 ALTER TABLE cusordered
-  MODIFY id bigserial(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY id int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table customers
 --
 ALTER TABLE customers
-  MODIFY id bigserial(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY id int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table fulfilledcus
 --
 ALTER TABLE fulfilledcus
-  MODIFY id bigserial(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY id int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table fulfilledorderes
 --
 ALTER TABLE fulfilledorderes
-  MODIFY id bigserial(255) NOT NULL AUTO_INCREMENT;
+  MODIFY id int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table orders
 --
 ALTER TABLE orders
-  MODIFY id bigserial(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY id int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table products
 --
 ALTER TABLE products
-  MODIFY id bigserial(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY id int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
